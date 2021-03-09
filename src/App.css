@@ -20,17 +20,25 @@ nav ul {
   flex: 1;
 }
 
-main {
+.body {
   flex: 1;
   display: flex;
+  position: relative;
 }
 
-body {
+.sidebar {
+  position: absolute;
+  background-color: gray;
+  height: 100%;
+  display: none;
+}
+
+main {
   flex: 1;
   display: flex;
   flex-direction: column;
 }
 
-.body-grid {
+.main-grid {
   flex: 1;
 }

@@ -1,27 +1,40 @@
 import './App.css';
 
 function App() {
+
+  const displaySB = () => {
+    var sb = document.getElementById("sidebar");
+    if (sb.style.display === "none") {
+      sb.style.display = "block";
+    } else {
+      sb.style.display = "none";
+    }
+  }
+  
   return (
     <div className="app">
       <section className='header'>header</section>
       <nav>
         <ul>
+          <button onClick={displaySB}>Sidebar btn</button>
           <li className='logo'>logo</li>
           <li className='invs'></li>
-          <li>1</li>
-          <li>1</li>
+          <li>links</li>
+          <li>links</li>
+          <li>links</li>
+          <li>links</li>
         </ul>
       </nav>
-      <main>
-        <section className='side-bar'>
+      <section className='body'>
+        <section id='sidebar' className='sidebar'>
           Sidebar
         </section>
-        <body>
+        <main>
           <section className='banner'>banner</section>
-          <section className='body-grid'>body grid</section>
+          <section className='main-grid'>main grid</section>
           <section className='footer'>footer</section>
-        </body>
-      </main>
+        </main>
+      </section>
     </div>
   );
 }
