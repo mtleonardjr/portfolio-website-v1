@@ -15,8 +15,20 @@ function App() {
     <div className="app">
       <section className='header'>header</section>
       <nav>
-        <ul>
+        <ul className='mobile-header'>
           <button onClick={displaySB}>Sidebar btn</button>
+          <h3>Michael's Portfolio</h3>
+          <div class="dropdown">
+            <button class="dropbtn">Dropdown</button>
+            <div class="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+            </div>
+          </div>
+          
+        </ul>
+        <ul className='link-bar'>
           <li className='logo'>logo</li>
           <li className='invs'></li>
           <li>links</li>
