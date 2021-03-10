@@ -4,10 +4,19 @@ function App() {
 
   const displaySB = () => {
     var sb = document.getElementById("sidebar");
-    if (sb.style.display === "none") {
+    if (window.getComputedStyle(sb, null).getPropertyValue("display")=== "none") {
       sb.style.display = "block";
     } else {
       sb.style.display = "none";
+    }
+  }
+
+  const displayDD = () => {
+    var dd = document.getElementById("dropdown-content");
+    if (window.getComputedStyle(dd, null).getPropertyValue("display")=== "none") {
+      dd.style.display = "flex";
+    } else {
+      dd.style.display = "none";
     }
   }
   
@@ -18,12 +27,12 @@ function App() {
         <ul className='mobile-header'>
           <button onClick={displaySB}>Sidebar btn</button>
           <h3>Michael's Portfolio</h3>
-          <div class="dropdown">
-            <button class="dropbtn">Dropdown</button>
-            <div class="dropdown-content">
-            <a href="#">Link 1</a>
-            <a href="#">Link 2</a>
-            <a href="#">Link 3</a>
+          <div className="dropdown">
+            <button className="dropbtn" onClick={displayDD}>Dropdown</button>
+            <div className="dropdown-content" id="dropdown-content">
+              <a href="#home">Link 1</a>
+              <a href="#home">Link 2</a>
+              <a href="#home">Link 3</a>
             </div>
           </div>
           
