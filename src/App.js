@@ -3,6 +3,8 @@ import './App.css';
 
 function App() {
 
+  const node = useRef();
+
   const [sideBar, setSideBar] = useState(false);
   const [dropDown, setDropDown] = useState(false);
 
@@ -24,7 +26,7 @@ function App() {
           <h3>Michael's Portfolio</h3>
           <div className="dropdown">
             <button className="dropbtn" onClick={openDropDown}>Dropdown</button>
-            {dropDown && <div className="dropdown-content" id="dropdown-content">
+            {dropDown && <div className="dropdown-content" id="dropdown-content" ref={node}>
               <a href="#home">Link 1</a>
               <a href="#home">Link 2</a>
               <a href="#home">Link 3</a>
