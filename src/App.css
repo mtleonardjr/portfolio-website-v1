@@ -38,7 +38,7 @@ nav ul {
   position: absolute;
   background-color: gray;
   height: 100%;
-  display: none;
+  display: block;
 }
 
 main {
@@ -56,7 +56,7 @@ main {
 }
 
 .dropdown-content {
-  display: none;
+  display: flex;
   flex-direction: column;
   position: absolute;
   background-color: #f9f9f9;
