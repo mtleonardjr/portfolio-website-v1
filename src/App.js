@@ -3,37 +3,17 @@ import './App.css';
 
 function App() {
 
-  const [open, setOpen] = useState(false);
+  const [sideBar, setSideBar] = useState(false);
   const [dropDown, setDropDown] = useState(false);
 
-  //Solution using hooks
+  //Solutions using hooks
   const openSideBar = () => {
-    setOpen(!open);
+    setSideBar(!sideBar);
   }
 
   const openDropDown = () => {
     setDropDown(!dropDown);
   }
-
-
-  // //Trad. JS and CSS solution
-  // const displaySB = () => {
-  //   var sb = document.getElementById("sidebar");
-  //   if (window.getComputedStyle(sb, null).getPropertyValue("display")=== "none") {
-  //     sb.style.display = "block";
-  //   } else {
-  //     sb.style.display = "none";
-  //   }
-  // }
-
-  // const displayDD = () => {
-  //   var dd = document.getElementById("dropdown-content");
-  //   if (window.getComputedStyle(dd, null).getPropertyValue("display")=== "none") {
-  //     dd.style.display = "flex";
-  //   } else {
-  //     dd.style.display = "none";
-  //   }
-  // }
   
   return (
     <div className="app">
@@ -44,11 +24,11 @@ function App() {
           <h3>Michael's Portfolio</h3>
           <div className="dropdown">
             <button className="dropbtn" onClick={openDropDown}>Dropdown</button>
-            <div className="dropdown-content" id="dropdown-content">
+            {dropDown && <div className="dropdown-content" id="dropdown-content">
               <a href="#home">Link 1</a>
               <a href="#home">Link 2</a>
               <a href="#home">Link 3</a>
-            </div>
+            </div>}
           </div>
           
         </ul>
@@ -62,7 +42,7 @@ function App() {
         </ul>
       </nav>
       <section className='body'>
-        {open && <section id='sidebar' className='sidebar'>Sidebar</section>}
+        {sideBar && <section id='sidebar' className='sidebar'>Sidebar</section>}
         <main>
           <section className='banner'>banner</section>
           <section className='main-grid'>main grid</section>
