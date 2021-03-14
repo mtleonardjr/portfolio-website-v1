@@ -28,17 +28,13 @@ nav ul {
   flex: 1;
 }
 
-.body {
-  flex: 1;
-  display: flex;
-  position: relative;
-}
-
 .sidebar {
   position: absolute;
   background-color: gray;
   height: 100%;
   display: block;
+  z-index: 1; /* Places on top */
+  min-width: 70vw;
 }
 
 main {

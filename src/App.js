@@ -1,9 +1,10 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import './App.css';
 
 function App() {
 
-  const node = useRef();
+  const dropDownNode = useRef();
+  const sideBarNode = useRef();
 
   const [sideBar, setSideBar] = useState(false);
   const [dropDown, setDropDown] = useState(false);
@@ -12,45 +13,78 @@ function App() {
   const openSideBar = () => {
     setSideBar(!sideBar);
   }
-
   const openDropDown = () => {
     setDropDown(!dropDown);
   }
+
+  //Handling Mouse Clicks
+  const handleDropDownClick = (e) => {
+    if (dropDownNode.current.contains(e.target)) {
+      return;
+    } else {
+      setDropDown(false);
+    }
+  }
+  const handleSideBarClick = (e) => {
+    if (sideBarNode.current.contains(e.target)) {
+      return;
+    } else {
+      setSideBar(false);
+    }
+  }
+
+  //Hook to add/remove listeners
+  useEffect(()=>{
+    if(dropDown) {
+      document.addEventListener("mousedown", handleDropDownClick);
+    } else {
+      document.removeEventListener("mousedown", handleDropDownClick);
+    }
+    if(sideBar) {
+      document.addEventListener("mousedown", handleSideBarClick);
+    } else {
+      document.removeEventListener("mousedown", handleSideBarClick);
+    }
+    return () => {
+      document.removeEventListener("mousedown", handleDropDownClick);
+      document.removeEventListener("mousedown", handleSideBarClick);
+    } 
+  }, [dropDown, sideBar])
   
   return (
-    <div className="app">
-      <section className='header'>header</section>
-      <nav>
-        <ul className='mobile-header'>
-          <button onClick={openSideBar}>Sidebar btn</button>
-          <h3>Michael's Portfolio</h3>
-          <div className="dropdown">
-            <button className="dropbtn" onClick={openDropDown}>Dropdown</button>
-            {dropDown && <div className="dropdown-content" id="dropdown-content" ref={node}>
-              <a href="#home">Link 1</a>
-              <a href="#home">Link 2</a>
-              <a href="#home">Link 3</a>
-            </div>}
-          </div>
-          
-        </ul>
-        <ul className='link-bar'>
-          <li className='logo'>logo</li>
-          <li className='invs'></li>
-          <li>links</li>
-          <li>links</li>
-          <li>links</li>
-          <li>links</li>
-        </ul>
-      </nav>
-      <section className='body'>
-        {sideBar && <section id='sidebar' className='sidebar'>Sidebar</section>}
+    <div className='app-container'>
+      {sideBar && <section id='sidebar' className='sidebar' ref={sideBarNode} >Sidebar</section>}
+      <div className="app">
+        <section className='header'>header</section>
+        <nav>
+          <ul className='mobile-header'>
+            <button onClick={openSideBar}>Sidebar btn</button>
+            <h3>Michael's Portfolio</h3>
+            <div className="dropdown" ref={dropDownNode}>
+              <button className="dropbtn" onClick={openDropDown}>Dropdown</button>
+              {dropDown && <div className="dropdown-content" id="dropdown-content" >
+                <a href="#home">Link 1</a>
+                <a href="#home">Link 2</a>
+                <a href="#home">Link 3</a>
+              </div>}
+            </div>
+            
+          </ul>
+          <ul className='link-bar'>
+            <li className='logo'>logo</li>
+            <li className='invs'></li>
+            <li>links</li>
+            <li>links</li>
+            <li>links</li>
+            <li>links</li>
+          </ul>
+        </nav>
         <main>
           <section className='banner'>banner</section>
           <section className='main-grid'>main grid</section>
           <section className='footer'>footer</section>
         </main>
-      </section>
+      </div>
     </div>
   );
 }
