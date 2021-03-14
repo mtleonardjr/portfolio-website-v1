@@ -19,6 +19,21 @@
   display: none;
 }
 
+.mobile-header {
+  min-height: 3em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.side-bar-btn {
+  margin-left: 0.25em;
+}
+
+/* .mobile-header h3 {
+  align-self: center;
+} */
+
 nav ul {
   display: flex;
   list-style-type: none;
@@ -47,8 +62,13 @@ main {
   flex: 1;
 }
 
+.drop-down {
+  margin-right: 0.25em;
+}
 .dropbtn {
   border: none;
+  background-color: blue;
+  justify-self: stretch;
 }
 
 .dropdown-content {

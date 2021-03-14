@@ -1,4 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react'
+import { FiSidebar } from 'react-icons/fi'
+import { GiHamburgerMenu } from 'react-icons/gi'
 import './App.css';
 
 function App() {
@@ -58,10 +60,10 @@ function App() {
         <section className='header'>header</section>
         <nav>
           <ul className='mobile-header'>
-            <button onClick={openSideBar}>Sidebar btn</button>
+            <FiSidebar onClick={openSideBar} className='side-bar-btn' size='2.5em'>Sidebar btn</FiSidebar>
             <h3>Michael's Portfolio</h3>
-            <div className="dropdown" ref={dropDownNode}>
-              <button className="dropbtn" onClick={openDropDown}>Dropdown</button>
+            <div className="drop-down" ref={dropDownNode}>
+              <GiHamburgerMenu className="dropbtn" onClick={openDropDown} size='2.5em'>Dropdown</GiHamburgerMenu>
               {dropDown && <div className="dropdown-content" id="dropdown-content" >
                 <a href="#home">Link 1</a>
                 <a href="#home">Link 2</a>
