@@ -64,7 +64,7 @@ function App() {
             <h3>Michael's Portfolio</h3>
             <div className="drop-down" ref={dropDownNode}>
               <GiHamburgerMenu className="dropbtn" onClick={openDropDown} size='2.5em'>Dropdown</GiHamburgerMenu>
-              {dropDown && <div className="dropdown-content" id="dropdown-content" >
+              {dropDown && <div className="dropdown-content"  >
                 <a href="#home">Link 1</a>
                 <a href="#home">Link 2</a>
                 <a href="#home">Link 3</a>
