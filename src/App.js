@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react'
 import { FiSidebar } from 'react-icons/fi'
 import { GiHamburgerMenu } from 'react-icons/gi'
 import './App.css';
+import pic from './images/portfolioTn.PNG'
 
 function App() {
 
@@ -98,7 +99,50 @@ function App() {
               </ul>
             </div>
           </section>
-          <section className='main-grid'>main grid</section>
+          <section className='main-grid'>
+            <div className='project'>
+              <h2>My First App</h2>
+              <div className='project-body'>
+                <div className='project-body-image-container'><img src={pic} alt="portfolio thumbnail" className='project-body-image' /></div>
+                <div className='project-body-text'>et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut</div>
+              </div>
+              <div className='project-links'>
+              <h5>Links:</h5>
+              <ul>
+                <a href="#home" className='banner-link'>Github</a>
+                <a href="#home" className='banner-link'>demo site</a>
+              </ul>
+            </div>
+            </div>
+            <div className='project'>
+              <h2>Snake Game</h2>
+              <div className='project-body'>
+                <div className='project-body-image-container'><img src={pic} alt="portfolio thumbnail" className='project-body-image' /></div>
+                <div className='project-body-text'>et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut</div>
+              </div>
+              <div className='project-links'>
+              <h5>Links:</h5>
+              <ul>
+                <a href="#home" className='banner-link'>Github</a>
+                <a href="#home" className='banner-link'>demo site</a>
+              </ul>
+            </div>
+            </div>
+            <div className='project'>
+              <h2>Portfolio</h2>
+              <div className='project-body'>
+                <div className='project-body-image-container'><img src={pic} alt="portfolio thumbnail" className='project-body-image' /></div>
+                <div className='project-body-text'>et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut</div>
+              </div>
+              <div className='project-links'>
+              <h5>Links:</h5>
+              <ul>
+                <a href="#home" className='banner-link'>Github</a>
+                <a href="#home" className='banner-link'>demo site</a>
+              </ul>
+            </div>
+            </div>
+          </section>
           <section className='footer'>footer</section>
         </main>
       </div>

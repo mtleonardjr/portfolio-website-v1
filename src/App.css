@@ -17,13 +17,12 @@
 }
 
 .sidebar {
-  background-color: white;
   min-height: 100%;
-  display: block;
+  display: flex;
   position: absolute;
   z-index: 1; /* Places on top */
   min-width: 70vw;
-  background-color: rgb(148, 139, 209);
+  background-color: rgb(60, 45, 156);
 }
 
 /* Header Styling */
@@ -42,7 +41,7 @@
   align-items: center;
   color: rgb(236, 236, 236);
   background-color: rgb(29, 22, 73);
-  border: 1px solid rgb(59, 44, 151);
+
   font-family: somatic, serif;
 }
 
@@ -77,6 +76,7 @@ nav ul {
   flex-direction: column;
   position: absolute;
   right: 0;
+  top: 3.5em;
   background-color: #f9f9f9;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1; /* Places on top */
@@ -153,15 +153,49 @@ main {
 
 /* Main Grid Stying */
 .main-grid {
-  margin: 0 0.5em 0.5em;
+  font-family: sans-serif;
+  margin: 0 0.5em;
   flex: 1;
-  min-height: 40em;
-  background-color: rgb(117, 103, 206);
-  border: 1px solid rgb(133, 116, 245);
+
+  background-color: rgb(29, 22, 73);
+  display: grid;
+}
+
+.project {
+  border: 1px solid rgb(54, 33, 196);
+  background-color: rgb(33, 20, 114);
+  margin-bottom: 0.5em;
+  color: rgb(196, 196, 196);
+  min-height: 15em;
+}
+
+.project h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: rgb(60, 45, 156);
+  min-height: 2em;
+  border-bottom: 2px solid white;
+  border-top: 2px solid white;
+}
+
+.project-body-image-container {
+  border: 2px solid white;
+  border-radius: 5px;
+  float: left;
+  max-width: 30%;
+  margin: 0.5em;
+}
+.project-body-image {
+  max-width: 100%;
+}
+
+.project-body-text {
+  margin: 0.5em;
 }
 
 /* Footer Styling */
 .footer {
   min-height: 5em;
-  background-color: rgb(148, 139, 209);
 }
