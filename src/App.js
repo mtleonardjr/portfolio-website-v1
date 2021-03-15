@@ -61,13 +61,13 @@ function App() {
         <nav>
           <ul className='mobile-header'>
             <FiSidebar onClick={openSideBar} className='side-bar-btn' size='2.5em'>Sidebar btn</FiSidebar>
-            <h3>Michael's Portfolio</h3>
+            <h3>Portfolio</h3>
             <div className="drop-down" ref={dropDownNode}>
               <GiHamburgerMenu className="dropbtn" onClick={openDropDown} size='2.5em'>Dropdown</GiHamburgerMenu>
               {dropDown && <div className="dropdown-content"  >
-                <a href="#home">Link 1</a>
-                <a href="#home">Link 2</a>
-                <a href="#home">Link 3</a>
+                <a href="#home">Home</a>
+                <a href="#home">Categories</a>
+                <a href="#home">About</a>
               </div>}
             </div>
             
@@ -82,7 +82,20 @@ function App() {
           </ul>
         </nav>
         <main>
-          <section className='banner'>banner</section>
+          <section className='banner'>
+            <div className='banner-head'>
+              <h4>Welcome to Portfolio</h4>
+              <p>The React built web app that helps you display your projects</p>
+              <p>Currently displaying 2 of Michael's projects</p>
+            </div>
+            <div className='banner-links'>
+              <h5>Jump to a project</h5>
+              <ul>
+                <a href="#home">Project 1</a>
+                <a href="#home">Project 2</a>
+              </ul>
+            </div>
+          </section>
           <section className='main-grid'>main grid</section>
           <section className='footer'>footer</section>
         </main>

@@ -1,16 +1,32 @@
+/* App Styling */
+@font-face {
+  font-family: "somatic";
+  src: local("somatic"), url(./fonts/Somatic-Rounded.otf) format("truetype");
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  border: 1px solid black;
 }
 
 .app {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  background-color: rgb(29, 22, 73);
 }
 
+.sidebar {
+  position: absolute;
+  background-color: white;
+  height: 100%;
+  display: block;
+  z-index: 1; /* Places on top */
+  min-width: 70vw;
+  background-color: rgb(175, 169, 212);
+}
+
+/* Header Styling */
 .link-bar {
   display: none;
 }
@@ -24,15 +40,19 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  color: rgb(236, 236, 236);
+  background-color: rgb(29, 22, 73);
+  border: 1px solid rgb(59, 44, 151);
+  font-family: somatic, serif;
 }
 
 .side-bar-btn {
   margin-left: 0.25em;
 }
 
-/* .mobile-header h3 {
-  align-self: center;
-} */
+.mobile-header h3 {
+  font-size: xx-large;
+}
 
 nav ul {
   display: flex;
@@ -43,33 +63,12 @@ nav ul {
   flex: 1;
 }
 
-.sidebar {
-  position: absolute;
-  background-color: gray;
-  height: 100%;
-  display: block;
-  z-index: 1; /* Places on top */
-  min-width: 70vw;
-}
-
-main {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.main-grid {
-  flex: 1;
-}
-
 .drop-down {
   margin-right: 0.25em;
   padding-top: 0.25em;
-  border: none;
 }
 
 .dropbtn {
-  border: none;
   justify-self: stretch;
 }
 
@@ -85,5 +84,65 @@ main {
 
 .dropdown-content a {
   text-decoration: none;
-  min-width: 50vw;
+  min-width: 60vw;
+  min-height: 3em;
+  display: flex;
+  align-items: center;
+  padding: 0 0 0 1em;
+}
+
+/* Main Styling */
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Banner Styling */
+.banner {
+  margin: 0.5em;
+  color: rgb(196, 196, 196);
+  border: 1px solid rgb(54, 33, 196);
+  background-color: rgb(33, 20, 114);
+  display: flex;
+  flex-direction: column;
+  font-family: sans-serif;
+}
+
+.banner-head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.banner-head * {
+  margin: 0.25em 1.5em 0 1.5em;
+  text-align: center;
+}
+
+.banner-head h4 {
+  font-size: x-large;
+}
+
+.banner-links {
+  background-color: rgb(60, 45, 156);
+  border-top: 1px solid white;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+/* Main Grid Stying */
+.main-grid {
+  margin: 0 0.5em 0.5em;
+  flex: 1;
+  min-height: 30em;
+  background-color: rgb(117, 103, 206);
+  border: 1px solid rgb(142, 125, 255);
+}
+
+/* Footer Styling */
+.footer {
+  min-height: 10em;
+  background-color: rgb(175, 169, 212);
 }
