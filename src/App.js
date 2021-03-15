@@ -89,10 +89,12 @@ function App() {
               <p>Currently displaying 2 of Michael's projects</p>
             </div>
             <div className='banner-links'>
-              <h5>Jump to a project</h5>
+              <h5>Jump to a project:</h5>
               <ul>
-                <a href="#home">Project 1</a>
-                <a href="#home">Project 2</a>
+                <a href="#home" className='banner-link'>Project 1</a>
+                <a href="#home" className='banner-link'>Project 2</a>
+                <a href="#home" className='banner-link'>Project 3</a>
+                <a href="#home" className='banner-link'>Project 4</a>
               </ul>
             </div>
           </section>
