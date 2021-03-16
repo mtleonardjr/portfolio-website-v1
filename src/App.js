@@ -2,7 +2,9 @@ import React, { useState, useRef, useEffect } from 'react'
 import { FiSidebar } from 'react-icons/fi'
 import { GiHamburgerMenu } from 'react-icons/gi'
 import './App.css';
-import pic from './images/portfolioTn.PNG'
+import cycle from './images/cycle.PNG'
+import wikipedia from './images/wikipedia.PNG'
+import snake from './images/snake.PNG'
 
 function App() {
 
@@ -101,9 +103,27 @@ function App() {
           </section>
           <section className='main-grid'>
             <div className='project'>
-              <h2>My First App</h2>
+              <h2>Cycle</h2>
               <div className='project-body'>
-                <div className='project-body-image-container'><img src={pic} alt="portfolio thumbnail" className='project-body-image' /></div>
+                <div className='project-body-image-container'><img src={cycle} alt="portfolio thumbnail" className='project-body-image' /></div>
+                <div className='project-body-text'>et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut</div>
+              </div>
+              <div className='project-links'>
+                <h5>Key Technologies:</h5>
+                <ul>
+                  <li className='banner-link'>React</li>
+                </ul>
+                <h5>Links:</h5>
+                <ul>
+                  <a href="#home" className='banner-link'>Github</a>
+                  <a href="#home" className='banner-link'>demo site</a>
+                </ul>
+              </div>
+            </div>
+            <div className='project'>
+              <h2>Wikipedia Clone</h2>
+              <div className='project-body'>
+                <div className='project-body-image-container'><img src={wikipedia} alt="portfolio thumbnail" className='project-body-image' /></div>
                 <div className='project-body-text'>et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut</div>
               </div>
               <div className='project-links'>
@@ -117,21 +137,7 @@ function App() {
             <div className='project'>
               <h2>Snake Game</h2>
               <div className='project-body'>
-                <div className='project-body-image-container'><img src={pic} alt="portfolio thumbnail" className='project-body-image' /></div>
-                <div className='project-body-text'>et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut</div>
-              </div>
-              <div className='project-links'>
-              <h5>Links:</h5>
-              <ul>
-                <a href="#home" className='banner-link'>Github</a>
-                <a href="#home" className='banner-link'>demo site</a>
-              </ul>
-            </div>
-            </div>
-            <div className='project'>
-              <h2>Portfolio</h2>
-              <div className='project-body'>
-                <div className='project-body-image-container'><img src={pic} alt="portfolio thumbnail" className='project-body-image' /></div>
+                <div className='project-body-image-container'><img src={snake} alt="portfolio thumbnail" className='project-body-image' /></div>
                 <div className='project-body-text'>et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut</div>
               </div>
               <div className='project-links'>

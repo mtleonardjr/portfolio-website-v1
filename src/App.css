@@ -167,6 +167,8 @@ main {
   margin-bottom: 0.5em;
   color: rgb(196, 196, 196);
   min-height: 15em;
+  display: flex;
+  flex-direction: column;
 }
 
 .project h2 {
@@ -193,6 +195,15 @@ main {
 
 .project-body-text {
   margin: 0.5em;
+}
+
+.project-links {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-links h5 {
+  flex: 1;
 }
 
 /* Footer Styling */
