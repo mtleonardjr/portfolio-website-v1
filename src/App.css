@@ -21,8 +21,9 @@
   display: flex;
   position: absolute;
   z-index: 1; /* Places on top */
-  min-width: 70vw;
+  min-width: 280px;
   background-color: rgb(60, 45, 156);
+  box-shadow: 0 0 0 99999px rgba(0, 0, 0, 0.5);
 }
 
 /* Header Styling */
@@ -200,13 +201,21 @@ main {
 .project-links {
   display: flex;
   flex-direction: column;
+  margin: 0.25em;
 }
 
 .project-links h5 {
   flex: 1;
 }
 
+.project-links ul {
+  display: flex;
+  list-style-type: none;
+}
+
 /* Footer Styling */
 .footer {
   min-height: 5em;
+  border: 1px solid rgb(54, 33, 196);
+  background-color: rgb(33, 20, 114);
 }

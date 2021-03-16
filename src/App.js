@@ -112,6 +112,9 @@ function App() {
                 <h5>Key Technologies:</h5>
                 <ul>
                   <li className='banner-link'>React</li>
+                  <li className='banner-link'>JavaScript</li>
+                  <li className='banner-link'>HTML</li>
+                  <li className='banner-link'>CSS</li>
                 </ul>
                 <h5>Links:</h5>
                 <ul>
